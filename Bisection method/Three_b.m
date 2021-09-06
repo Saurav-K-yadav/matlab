@@ -6,18 +6,15 @@ a=1;
 b=2;
 
 e=10^(-3);
-n=0;
-while 1
+n=round((log(b-a)-log(e))/log(2));
+for i=1:1:n
     c=(a+b)/2;
 if (f(a)*f(c))<0
     b=c;
 else
     a=c;
 end
-n=n+1;
-if n>=((log(b-a)-log(e))/log(2))
-    break;
 end
-end
+fprintf("Answer = \n");
 disp(c);
-fprintf("Number of Iterations \n %d\n",n);
+fprintf("Number of Iterations = \n %d\n",n);
